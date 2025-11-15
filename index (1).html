@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Pipeline Network Optimization</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Water Pipeline Network Optimization</h1>
+            <p class="subtitle">Visualize and optimize water pipeline networks with minimum spanning trees</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="app-container">
+                <div class="controls-panel">
+                    <div class="control-group">
+                        <h3>Buildings</h3>
+                        <button id="addBuilding" class="btn primary">
+                            <span class="btn-icon">🏢</span>
+                            <span>Add Building</span>
+                        </button>
+                        <button id="addConnection" class="btn secondary">
+                            <span class="btn-icon">🔗</span>
+                            <span>Add Connection</span>
+                        </button>
+                    </div>
+                    
+                    <div class="control-group">
+                        <h3>Optimization</h3>
+                        <button id="findMST" class="btn success">
+                            <span class="btn-icon">🔍</span>
+                            <span>Find Minimum Spanning Tree</span>
+                        </button>
+                        <button id="reset" class="btn danger">
+                            <span class="btn-icon">🔄</span>
+                            <span>Reset</span>
+                        </button>
+                    </div>
+
+                    <div class="info-panel">
+                        <div class="info-item">
+                            <span class="info-label">Total Cost:</span>
+                            <span class="info-value" id="totalCost">$0</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Status:</span>
+                            <span class="info-value" id="status">Click 'Add Building' to start</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="canvas-container">
+                    <canvas id="canvas" width="800" height="500"></canvas>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Water Pipeline Network Optimization Tool</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
